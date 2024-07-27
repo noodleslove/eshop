@@ -10,6 +10,6 @@ type Address struct {
 	State      string `gorm:"not null" json:"State"`
 	PostalCode string `gorm:"not null" json:"PostalCode"`
 	Country    string `gorm:"not null" json:"Country"`
-
+	// Note the many-to-many relationship with the Customer struct
 	Customers []Customer `gorm:"many2many:customer_addresses;" json:"customers"`
 }
